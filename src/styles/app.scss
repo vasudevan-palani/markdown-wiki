@@ -1,0 +1,25 @@
+@import 'vars.scss';
+
+pre {
+    background-color: $codeeditor-bg;
+}
+
+.navbar-primary {
+    background-color: $primary-blue;
+    border-color: $primary-blue;
+    color: $white;
+    a {
+        color:$white;
+    }
+    a:hover {
+        color :$white;
+    }
+
+    .toggle-button {
+        color :$white;
+        border-color :$white;
+        .icon-bar {
+            background-color : $white;
+        }
+    }
+}

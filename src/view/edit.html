@@ -1,0 +1,46 @@
+<form name="edit-page" ng-init="init()">
+    <div class="row">
+        <div wk-class="all-12">
+            <div class="row">
+                <div wk-class="all-12">
+                    <div class="form-group">
+                        <label>Page Name : </label>
+                        <input type="text" class="form-control" ng-model="pagename"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div wk-class="all-12">
+                    <div class="pull-right">
+                        <button class="btn btn-info" ng-click="view.show_preview = false">Editor</button>
+                        <button class="btn btn-primary" ng-click="view.show_preview = true">Preview</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div wk-class="12-12-12-12" ng-hide="view.show_preview">
+                    <div ui-codemirror="{ onLoad : codemirrorLoaded, lineNumbers: true, mode: 'markdown' }" ng-model='pageeditcontent'></div>
+                </div>
+                <div wk-class="12-12-12-12" ng-show="view.show_preview">
+                    <div ng-bind-html="outputText"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div wk-class="all-12">
+                    <div class="form-group">
+                        <label>Tags : </label>
+                        <input type="text" class="form-control" ng-model="tags"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div wk-class="all-12">
+                    <div class="text-right">
+                        <a class="btn btn-danger" href="#/view/{{pagename}}">Cancel</a>
+                        <button class="btn btn-success" ng-click="savePage()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

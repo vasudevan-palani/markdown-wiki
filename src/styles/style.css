@@ -1,0 +1,13 @@
+body {
+    
+}
+
+.CodeMirror {
+  border: 1px solid #eee;
+  height: 700px;
+}
+
+#outputText {
+    overflow-y: auto;
+    height: 700px;
+}
